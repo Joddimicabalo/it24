@@ -22,16 +22,18 @@
         if (Tasktext) {
             addTaskItem(Tasktext);
         } else {
-            console.log("No task entered, nothing to add."); 
+            console.log("No task entered, nothing to add.");
+
             return  value;
         }
+    }
 function addTaskItem(Tasktext) {
 const li = document.createElement("li");
 li.textContent = Tasktext;
 
 document.getElementById("tasklist").appendChild(li);
 console.log("addtaskItem() called, =>" + Tasktext, Date());
-cons deleteBtn = createDeleteButton(li);
+cons.deleteBtn = createDeleteButton(li);
 li.appendChild(deleteBtn);
 
 }
@@ -40,18 +42,18 @@ function createDeleteButton(li){
      deleteBtn.textContent = "X";
      deleteBtn.classname = "delete-btn";
      deleteBtn.style.marginLeft = "8px";
-     delete.onclick = () => handleDeleteClicl(li);
+     deleteBtn.onclick = () => handleDeleteClicl(li);
 
-     console.log("createDeleteButton() called ->, li.textContent";
+     console.log("createDeleteButton() called ->, li.textContent");
      return deleteBtn;
-     )
+     
 
-     funttion handleDeleteClick(li){
-        console.log("handleDeleteClick() ->", li.textContent.replace("x","").trim(),Date()
+     function handleDeleteClick(li){
+        console.log("handleDeleteClick() ->", li.textContent.replace("x","").trim(),Date());
         li.remove();
     }
 
-
+}
 
      </script>
 </body>
